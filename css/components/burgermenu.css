@@ -87,7 +87,7 @@ ul.flex-column > li.nav-item > a.nav-link{
     height: 30px;
     width: 30px;
     
-    background: url("../img/menu.svg") no-repeat 50% 50%;
+    background: url("../../img/menu.svg") no-repeat 50% 50%;
     background-size: cover;
 
     align-self: center;
