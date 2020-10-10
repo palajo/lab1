@@ -1,0 +1,17 @@
+section.second{
+    padding: 160px 0 160px 0;
+}
+section.second .second-background{
+    position: absolute;
+
+    right: 0;
+    bottom: 0;
+
+    width: 40%;
+    height: 100%;
+
+    z-index: -1;
+
+    background: url("../../img/woman.svg") no-repeat;
+    background-position: 0% center;
+}

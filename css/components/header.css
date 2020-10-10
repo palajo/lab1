@@ -1,0 +1,12 @@
+/* header */
+header{
+    padding: 20px 0;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+header nav{
+    margin-right: 60px;
+}
+/* ------------------------ */

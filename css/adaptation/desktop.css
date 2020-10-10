@@ -1,0 +1,22 @@
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	.container{
+		padding: 0 50px;
+	}
+
+	section.main{
+		padding: 100px 0 120px 0;
+	}
+	section.main .main-background{
+		width: 45%;
+		background-position: 0% -30%;
+	}
+	section .main-block{
+		max-width: 450px;
+	}
+	section.second{
+		padding: 160px 0 160px 0;
+	}
+	section.third{
+		padding: 60px 0 210px 0;
+	}
+}
