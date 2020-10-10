@@ -298,6 +298,7 @@ body{
 
 /* section - main */
 	section{
+		position: relative;
 		width: 100%;
 	}
 	section .container{
@@ -309,28 +310,64 @@ body{
 		max-width: 540px;
 
 	}
-
 	section.main{
 		padding: 120px 0 140px 0;
+	}
+	section.main .main-background{
+		position: absolute;
+
+		right: 0;
+		bottom: 0;
+
+		width: 40%;
+		height: 100%;
+
+		z-index: -1;
 
 		background: url("../img/tablet.svg") no-repeat;
-		background-position: 150% -100%;
+		background-position: 0% -70%;
 	}
 	section.second{
 		padding: 160px 0 160px 0;
+	}
+	section.second .second-background{
+		position: absolute;
+
+		right: 0;
+		bottom: 0;
+
+		width: 40%;
+		height: 100%;
+
+		z-index: -1;
 
 		background: url("../img/woman.svg") no-repeat;
-		background-position: 80% center;
+		background-position: 0% center;
 	}
 	section.third{
 		padding: 60px 0 210px 0;
+	}
+	.third-block-content{
+		max-width: 750px;
+		margin-bottom: 90px;
 	}
 /* ------------------------ */
 
 
 /* icon-block */
+	.icon-row{
+		display: flex;
+		justify-content: space-between;
+
+		margin-top: 50px;
+
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 	.icon-block{
-		max-width: 255px;
+		width: 50%;
+		padding: 0px 20px;
+		max-width: 255px;;
 	}
 	.icon-block .icon{
 		width: 36px;
@@ -365,7 +402,7 @@ body{
 	}
 	.purchase-block{
 		padding: 0px 30px;
-		max-width: 33.3%;
+		width: 33.3%;
 	}
 	.purchase-block .price{
 		font-size: 36px;
@@ -422,30 +459,348 @@ body{
 	footer nav{
 		margin: 20px 0 30px 0;
 	}
-	.icon-row{
+	.social-row{
 		display: flex;
 		justify-content: center;
 	}
-	.icon-row a{
+	.social-row a{
 		padding: 0px 15px;
 	}
-	.icon-row a img{
+	.social-row a img{
 		height: 16px;
 		filter: brightness(100%);
 
 		transition: 0.1s ease;
 	}
-	.icon-row a:hover img{
+	.social-row a:hover img{
 		filter: brightness(110%);
+	}
+/* ------------------------ */
+
+
+/* burgermenu */
+	.brugermenu{
+		position: fixed;
+	
+		top: 0;
+		left: -300px;
+
+		max-width: 90%;
+		width: 300px;
+		height: 100%;
+
+		background: #37447E;
+
+		z-index: 99;
+		transition: 0.2s ease;
+	}
+	.brugermenu.active{
+		left: 0;
+	}
+	ul.flex-column{
+		margin-top: 70px;
+	}
+	ul.flex-column > li.nav-item{
+		padding: 0;
+		margin: 0;
+
+		background: none;
+		transition: 0.2s ease;
+	}
+	ul.flex-column > li.nav-item.active{
+		background: #6F7CB2;
+	}
+	ul.flex-column > li.nav-item:hover{
+		background: #748ae5;
+	}
+	ul.flex-column > li.nav-item > a.nav-link{
+		display: block;
+
+		padding: 0px 40px;
+		color: white;
+
+		font-size: 14px;
+		line-height: 50px;
+		
+		font-weight: 500;
+	}
+
+	.close{
+		position: absolute;
+
+		display: flex;
+
+		top: 25px;
+		right: 40px;
+
+		cursor: pointer;
+	
+		font-size: 12px;
+		font-weight: 600;
+
+		color: white;
+	}
+	.close img{
+		height: 24px;
+		width: 24px;
+
+		filter: invert(0);
+		transform: rotate(0deg);
+
+		transition: 0.2s ease;
+
+		margin-left: 15px;
+	}
+	.close:hover{
+		transition: 0.2s ease;
+		color: #cdcbcb;
+	}
+	.close:hover img{
+		filter: invert(0.15);
+		transform: rotate(90deg);
+	}
+
+	.mobile-nav-icon{
+		display: none;
+
+		cursor: pointer;
+
+		height: 30px;
+		width: 30px;
+		
+		background: url("../img/menu.svg") no-repeat 50% 50%;
+		background-size: cover;
+
+		align-self: center;
+
+		margin-right: 20px;
+
+		filter: brightness(100%);
+		transition: 0.2s ease;
+	}
+	.mobile-nav-icon:hover{
+		filter: brightness(120%);
+	}
+/* ------------------------ */
+@media screen and (max-width: 340px){
+	.container{
+		padding: 0 30px !important;
+	}
+}
+@media screen and (max-width: 767px){
+	.container{
+		padding: 0 50px;
+		max-width: 500px;
 	}
 
 
+	.button{
+		width: 150px;
+		height: 40px;
+
+		border-radius: 5px;
+	}
 
 
+	h1{
+		font-size: 30px;
+		line-height: 36px;
+
+		font-weight: 600;
+	}
+	p{
+		font-size: 14px;
+		line-height: 18px;
+	}
 
 
+	header{
+		padding: 40px 0;
+	}
+	header nav{
+		display: none;
+	}
+	header button{
+		display: none;
+	}
+	header .mobile-nav-icon{
+		display: block;
+	}
+	header .logo{
+		font-size: 30px;
+		line-height: 30px;
+	}
 
 
+	section.main .main-background{
+		display: none;
+	}
+	section.second .second-background{
+		display: none;
+	}
+	section.main{
+		padding: 30px 0 70px 0;
+		background: none;
+	}
+	section.second{
+		padding: 70px 0 70px 0;
+
+		background: #f5f5f5;
+	}
+	section.third{
+		padding: 70px 0 70px 0;
+	}
+	.third-block-content{
+		margin-bottom: 50px;
+	}
 
 
-/* ------------------------ */
+	.icon-row{
+		display: block;
+
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.icon-block{
+		width: 100%;
+		margin-bottom: 50px;
+
+		padding: 0;
+	}
+	.icon-block:last-child{
+		margin-bottom: 0;
+	}
+
+
+	.purchase-row{
+		display: block;
+	}
+	.purchase-block{
+		width: 100%;
+		margin-bottom: 70px;
+	}
+	.purchase-block:last-child{
+		margin-bottom: 0;
+	}
+	.purchase-block .price{
+		font-weight: 900;
+	}
+
+	footer nav{
+		display: none;
+	}
+	footer button{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+	.container{
+		padding: 0 80px;
+		max-width: 750px;
+	}
+
+
+	.button{
+		width: 120px;
+		height: 30px;
+
+		border-radius: 5px;
+	}
+
+
+	h1{
+		font-size: 30px;
+		line-height: 36px;
+
+		font-weight: 600;
+	}
+	p{
+		font-size: 14px;
+		line-height: 18px;
+	}
+
+
+	header{
+		padding: 40px 0;
+	}
+	header nav{
+		display: none;
+	}
+
+	header .mobile-nav-icon{
+		display: block;
+	}
+	header .logo{
+		font-size: 30px;
+		line-height: 30px;
+	}
+
+
+	section.main .main-background{
+		display: none;
+	}
+	section.second .second-background{
+		display: none;
+	}
+	section.main{
+		padding: 30px 0 70px 0;
+		background: none;
+	}
+	section.second{
+		position: relative;
+		padding: 70px 0 70px 0;
+
+		background: #f5f5f5;
+	}
+
+	section.third{
+		padding: 70px 0 70px 0;
+	}
+	.third-block-content{
+		margin-bottom: 50px;
+	}
+
+
+	.purchase-row{
+		display: inline-block;
+	}
+	.purchase-block{
+		float: left;
+		width: calc(50% - 60px);
+
+		margin-bottom: 70px;
+	}
+	.purchase-block:last-child{
+		margin-bottom: 0;
+	}
+	.purchase-block .price{
+		font-weight: 900;
+	}
+	.purchase-block .description{
+		max-width: 400px;
+	}
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+	.container{
+		padding: 0 50px;
+	}
+
+	section.main{
+		padding: 100px 0 120px 0;
+	}
+	section.main .main-background{
+		width: 45%;
+		background-position: 0% -30%;
+	}
+	section .main-block{
+		max-width: 450px;
+	}
+	section.second{
+		padding: 160px 0 160px 0;
+	}
+	section.third{
+		padding: 60px 0 210px 0;
+	}
+}

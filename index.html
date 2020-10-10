@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -14,11 +13,15 @@
 </head>
 <header>
     <div class="container">
-        <a href="./index.html">
-            <div class="logo">
-                Landie
+        <div class="d-flex align-self-center">
+            <div class="mobile-nav-icon" onclick="showNav()">
             </div>
-        </a>
+            <a href="./index.html">
+                <div class="logo">
+                    Landie
+                </div>
+            </a>
+        </div>
         <div class="d-flex">
             <nav class="nav">
                 <a href="#home" class="nav-link">Home</a>
@@ -41,7 +44,31 @@
     </div>
 </header>
 <body>
+    <div class="brugermenu" id="burgermenu">
+        <div class="close" onclick="closeNav()">
+            Close
+            <img src="./img/close.svg" />
+        </div>
+        <ul class="flex-column">
+            <li class="nav-item active">
+                <a href="#home" class="nav-link">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#about" class="nav-link">
+                    About
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#pricing" class="nav-link">
+                    Pricing
+                </a>
+            </li>
+        </ul>
+    </div>
     <section class="main" id="home">
+        <div class="main-background"></div>
         <div class="container">
             <div class="main-block">
                 <h1 class="margin-bottom-25">
@@ -51,24 +78,21 @@
                     Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
                     Aenean commodo ligula eget dolor. Aenean massa. 
                     Cum sociis natoque penatibus et magnis dis parturient montes, 
-                    nascetur ridiculus<br/><br/>
-                    
-                    mus. Donec quam felis, ultricies nec, 
+                    nascetur ridiculus mus. Donec quam felis, ultricies nec, 
                     pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
                 </p>
-
-                <div class="d-flex justify-content-space-between margin-top-50">
+                <div class="icon-row">
                     <div class="icon-block">
-                        <img class="icon-block icon" src="./img/icon-1.svg" />
-                        <div class="icon-block title">Title goes here</div>
-                        <div class="icon-block content">
+                        <img class="icon" src="./img/icon-1.svg" />
+                        <div class="title">Title goes here</div>
+                        <div class="content">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
                         </div>
                     </div>
                     <div class="icon-block">
-                        <img class="icon-block icon" src="./img/icon-1.svg" />
-                        <div class="icon-block title">Title goes here</div>
-                        <div class="icon-block content">
+                        <img class="icon" src="./img/icon-1.svg" />
+                        <div class="title">Title goes here</div>
+                        <div class="content">
                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
                         </div>
                     </div>
@@ -77,6 +101,7 @@
         </div>
     </section>
     <section class="second" id="about">
+        <div class="second-background"></div>
         <div class="container">
             <div class="main-block">
                 <h1 class="margin-bottom-25">
@@ -89,8 +114,7 @@
                     nascetur ridiculus mus. Donec quam felis, ultricies nec, 
                     pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
                 </p>
-
-                <div class="d-flex justify-content-space-between margin-top-50">
+                <div class="icon-row">
                     <div class="icon-block">
                         <img class="icon" src="./img/icon-1.svg" />
                         <div class="title">Title goes here</div>
@@ -111,7 +135,7 @@
     </section>
     <section class="third" id="pricing">
         <div class="container not-flex">
-            <div class="max-width-750 margin-bottom-90">
+            <div class="third-block-content">
                 <h1 class="margin-bottom-25">
                     A Price To Suit Everyone
                 </h1>
@@ -212,7 +236,7 @@
                 <a href="#pricing" class="nav-link">Pricing</a>
             </nav>
         </div>
-        <div class="icon-row">
+        <div class="social-row">
             <a href="#">
                 <img src="./img/social/social-1.svg" />
             </a>
@@ -242,4 +266,13 @@
             });
         });
     });
+</script>
+
+<script>
+    function showNav() {
+        document.getElementById("burgermenu").classList.toggle("active");
+    }
+    function closeNav() {
+        document.getElementById("burgermenu").classList.toggle("active");
+    }
 </script>
