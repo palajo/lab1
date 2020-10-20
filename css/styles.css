@@ -1,21 +1,5 @@
 /* globals */
+@import './bootstrap.min.css';
+@import './animate.min.css';
 @import './global.css';
 @import './margins.css';
-@import './animate.min.css';
-
-/* header, footer */
-@import './components//header.css';
-@import './components/footer.css';
-
-/* sections */
-@import './components/section-main.css';
-@import './components/section-second.css';
-@import './components/section-third.css';
-
-/* burgermenu */
-@import './components/burgermenu.css';
-
-/* adaptation */
-@import './adaptation/mobile.css';
-@import './adaptation/tablet.css';
-@import './adaptation/desktop.css';

@@ -3,273 +3,102 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Lab 1</title>
+	<title>Lab 3</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/styles.css" />
 </head>
 <header>
     <div class="container">
-        <div class="d-flex align-self-center">
-            <div class="mobile-nav-icon" onclick="showNav()">
+        <div class="row">
+            <div class="col-4">
+                <h1>Heading</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Facilis saepe, dicta iste minima autem ut omnis odio, 
+                    quos voluptatem repudiandae totam velit deserunt non 
+                    officiis! Numquam dicta corrupti provident nihil?
+                </p>
+                <button type="button" class="btn btn-primary">Button</button>
+                <button type="button" class="btn btn-outline-primary">Primary</button>
             </div>
-            <a href="./index.html">
-                <div class="logo">
-                    Landie
-                </div>
-            </a>
         </div>
-        <div class="d-flex">
-            <nav class="nav">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-            </nav>
-            <div class="d-flex align-self-center">
-                <a href="#">
-                    <button class="button margin-right-25">
-                        Learn more
-                    </button>
-                </a>
-                <a href="#">
-                    <button class="button button-yellow">
-                        Buy now
-                    </button>
-                </a>
+    </div>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+                <button class="btn btn-outline-danger ml-2">Clear</button>
+              </form>
+            </div>
+          </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="form-group">
+                  <label>Title</label>
+                  <input type="text" class="form-control" placeholder="Text..">
+                </div>
+                <div class="form-group">
+                  <label>Description</label>
+                  <textarea class="form-control" placeholder="Description.."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Daily expense ($):</label>
+                    <input type="number" class="form-control" placeholder="5..">
+                  </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Example select</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                  </div>
             </div>
         </div>
     </div>
 </header>
-<body>
-    <div class="brugermenu" id="burgermenu">
-        <div class="close" onclick="closeNav()">
-            Close
-            <img src="./img/close.svg" />
-        </div>
-        <ul class="flex-column">
-            <li class="nav-item active">
-                <a href="#home" class="nav-link">
-                    Home
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#about" class="nav-link">
-                    About
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#pricing" class="nav-link">
-                    Pricing
-                </a>
-            </li>
-        </ul>
-    </div>
-    <section class="main" id="home">
-        <div class="main-background animate__animated animate__slideInRight"></div>
-        <div class="container">
-            <div class="main-block">
-                <h1 class="margin-bottom-25 animate__animated  animate__fadeInLeft">
-                    Introduce Your Product Quickly & Effectively
-                </h1>
-                <p class="animate__animated animate__fadeInUp">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                    Aenean commodo ligula eget dolor. Aenean massa. 
-                    Cum sociis natoque penatibus et magnis dis parturient montes, 
-                    nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                </p>
-                <div class="icon-row">
-                    <div class="icon-block animate__animated animate__fadeInRight">
-                        <img class="icon" src="./img/icon-1.svg" />
-                        <div class="title">Title goes here</div>
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                        </div>
-                    </div>
-                    <div class="icon-block animate__animated animate__fadeInRight">
-                        <img class="icon" src="./img/icon-1.svg" />
-                        <div class="title">Title goes here</div>
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="second" id="about">
-        <div class="second-background animate__animated animate__slideInUp"></div>
-        <div class="container">
-            <div class="main-block">
-                <h1 class="margin-bottom-25 animate__animated  animate__fadeInLeft">
-                    Light, Fast & Powerful
-                </h1>
-                <p class="animate__animated animate__fadeInUp">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
-                    Aenean commodo ligula eget dolor. Aenean massa. 
-                    Cum sociis natoque penatibus et magnis dis parturient montes, 
-                    nascetur ridiculus mus. Donec quam felis, ultricies nec, 
-                    pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-                </p>
-                <div class="icon-row">
-                    <div class="icon-block">
-                        <img class="icon" src="./img/icon-1.svg" />
-                        <div class="title">Title goes here</div>
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                        </div>
-                    </div>
-                    <div class="icon-block">
-                        <img class="icon" src="./img/icon-1.svg" />
-                        <div class="title">Title goes here</div>
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="third" id="pricing">
-        <div class="container d-block">
-            <div class="third-block-content">
-                <h1 class="margin-bottom-25">
-                    A Price To Suit Everyone
-                </h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
-                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
-                </p>    
-            </div>
-            <div class="purchase-row">
-                <div class="purchase-block">
-                    <div class="price">
-                        FREE
-                    </div>
-                    <div class="title">
-                        UI Kit Demo
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo ligula eget dolor. Aenean massa. 
-                        Cum sociis natoque penatibus et magnis dis parturient montes,
-                    </div>
-                    <div>
-                        <a href="#">
-                            <button class="button">
-                                Purchase Now
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="purchase-block">
-                    <div class="price">
-                        $40
-                    </div>
-                    <div class="title">
-                        Design Kit
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo ligula eget dolor. Aenean massa. 
-                        Cum sociis natoque penatibus et magnis dis parturient montes,
-                    </div>
-                    <div>
-                        <a href="#">
-                            <button class="button">
-                                Purchase Now
-                            </button>
-                        </a>
-                    </div>
-                </div>
-                <div class="purchase-block">
-                    <div class="price">
-                        $75
-                    </div>
-                    <div class="title">
-                        Design & Code Package
-                    </div>
-                    <div class="description">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-                        Aenean commodo ligula eget dolor. Aenean massa. 
-                        Cum sociis natoque penatibus et magnis dis parturient montes,
-                    </div>
-                    <div>
-                        <a href="#">
-                            <button class="button">
-                                Purchase Now
-                            </button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
-<footer>
-    <div class="container">
-        <div class="d-flex justify-content-space-between">
-            <div class="copyright">
-                ©2020 LPNU
-            </div>
-            <a href="./index.html">
-                <div class="logo">
-                    Landie
-                </div>
-            </a>
-        </div>
-        <div class="divider"></div>
-        <div class="d-flex justify-content-center">
-            <a href="#">
-                <button class="button">
-                    IoT edition
-                </button>
-            </a>
-        </div>
-        <div class="d-flex justify-content-center">
-            <nav class="nav">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-            </nav>
-        </div>
-        <div class="social-row">
-            <a href="#">
-                <img src="./img/social/social-1.svg" />
-            </a>
-            <a href="#">
-                <img src="./img/social/social-2.svg" />
-            </a>
-            <a href="#">
-                <img src="./img/social/social-3.svg" />
-            </a>
-            <a href="#">
-                <img src="./img/social/social-4.svg" />
-            </a>
-            <a href="#">
-                <img src="./img/social/social-5.svg" />
-            </a>
-        </div>
-    </div>
-</footer>
-
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>
-
-<script>
-    function showNav() {
-        document.getElementById("burgermenu").classList.toggle("active");
-    }
-    function closeNav() {
-        document.getElementById("burgermenu").classList.toggle("active");
-    }
-</script>
